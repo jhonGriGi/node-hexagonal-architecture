@@ -1,3 +1,3 @@
 export interface Logger {
-  logInfo(message: string, context: string);
+  logInfo(message: string, context: string): void;
 }
