@@ -2,7 +2,7 @@ import {UserRepository} from '../../adapters/repositories/user/user_repository';
 import {User} from '../../models/user/user';
 import {UserUseCase} from '../../ports/user/user_usecase';
 
-export class UserCrudRepository implements UserUseCase {
+export class UserCrudUseCase implements UserUseCase {
   private readonly repository: UserRepository;
 
   constructor(userRepository: UserRepository) {
@@ -14,6 +14,6 @@ export class UserCrudRepository implements UserUseCase {
   }
 
   async findById(id: string): Promise<User> {
-    return await this.findById(id);
+    return await this.repository.findById(id);
   }
 }
