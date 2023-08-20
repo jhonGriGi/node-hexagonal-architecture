@@ -1,6 +1,6 @@
-import { User } from "../../../domain/models/user/user";
-import { UserUseCase } from "../../../domain/ports/user/user_usecase";
-import { UserService } from "../../ports/user/user_service";
+import {User} from '../../../domain/models/user/user';
+import {UserUseCase} from '../../../domain/ports/user/user_usecase';
+import {UserService} from '../../ports/user/user_service';
 
 export class UserCrudService implements UserService {
   private readonly service: UserUseCase;
